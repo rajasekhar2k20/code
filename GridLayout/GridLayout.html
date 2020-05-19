@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="GridLayout.css" />
+</head>
+
+<body>
+    <div class="grid"></div>
+    <script src="GridLayout.js"></script>
+    <script>
+        let options = {
+            rows: [{
+                columnKey: 2,
+                columnName: 'COUNTRY',
+                value: ['IND', 'USA', 'UK']
+            }, {
+                columnKey: 1,
+                columnName: 'POPULATION IN MIL',
+                value: [135, 50, 30]
+            }, {
+                columnKey: 0,
+                columnName: 'CURRENCY',
+                value: ['RUPEE', 'DOLLAR', 'POUND']
+            }],
+            columns: [{
+                key: 2,
+                value: 'COUNTRY',
+            }, {
+                key: 1,
+                value: 'POPULATION IN MIL',
+            }, {
+                key: 0,
+                value: 'CURRENCY',
+            }]
+        }
+
+
+        let grid1 = new Grid(document.querySelector('.grid'), options);
+        grid1.rearrangeColumn(0, 2);
+    </script>
+</body>
+
+</html>

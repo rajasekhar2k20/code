@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.grid-body {
+    display: flex;
+}
+.grid-row,
+.grid-header {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+.grid-header {
+    font-weight: bold;
+}
+.grid-row {
+    flex-direction: column;
+    width: 10%;
+}
+.grid-cell,
+.header-cell{
+  width: 10%;
+  padding: 5px;
+  box-sizing:border-box;
+  border:1px solid black;
+}
+.grid-cell {
+    width: auto;
+}
+.container {
+  min-width: 1000px;
+}
